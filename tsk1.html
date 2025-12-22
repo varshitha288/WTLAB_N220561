@@ -5,31 +5,27 @@
 
     <style>
         body {
-            background-color: #f1cfd4;
             font-family: Verdana, sans-serif;
             margin: 0;
-            background:linear-gradient(to right,rgba(15,23,42,0.9),rgba(15,23,42,0.6)),
-            url("https://tse3.mm.bing.net/th/id/OIP.cWENbj36S5AnO1e_VV46igHaFj?pid=Api&P=0&h=180")center/cover;
+            background: linear-gradient(to right,rgba(15,23,42,0.9),rgba(15,23,42,0.6)),
+            url("https://tse3.mm.bing.net/th/id/OIP.cWENbj36S5AnO1e_VV46igHaFj?pid=Api&P=0&h=180") center/cover;
         }
 
         .header {
-            background-color: #e6d5d7;
             color: white;
             text-align: center;
             padding: 20px;
-             background:linear-gradient(to right,rgba(15,23,42,0.9),rgba(15,23,42,0.6)),
-            url("https://tse3.mm.bing.net/th/id/OIP.cWENbj36S5AnO1e_VV46igHaFj?pid=Api&P=0&h=180")center/cover;
-       
+            background: linear-gradient(to right,rgba(15,23,42,0.9),rgba(15,23,42,0.6)),
+            url("https://tse3.mm.bing.net/th/id/OIP.cWENbj36S5AnO1e_VV46igHaFj?pid=Api&P=0&h=180") center/cover;
         }
 
-        .menu {
+        nav {
             background-color: #f2cdd3;
             padding: 10px;
             text-align: center;
-             
         }
 
-        .menu a {
+        nav a {
             text-decoration: none;
             margin: 10px;
             color: #c97575;
@@ -38,10 +34,6 @@
 
         .content {
             padding: 20px;
-            font-color: white;
-             background:linear-gradient(to right,rgba(15,23,42,0.9),rgba(15,23,42,0.6)),
-            url("https://tse3.mm.bing.net/th/id/OIP.cWENbj36S5AnO1e_VV46igHaFj?pid=Api&P=0&h=180")center/cover;
-       
         }
 
         .box {
@@ -49,7 +41,6 @@
             border: 1px solid #ccc;
             padding: 15px;
             margin-bottom: 15px;
-             
         }
 
         .footer {
@@ -57,6 +48,11 @@
             color: white;
             text-align: center;
             padding: 10px;
+        }
+
+        video, audio {
+            width: 100%;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -74,7 +70,6 @@
     <a href="#">About</a>
     <a href="#">Contact</a>
 </nav>
-    
 
 <div class="content">
 
@@ -104,6 +99,24 @@
         </p>
     </div>
 
+    <!-- 🎵 AUDIO SECTION -->
+    <div class="box">
+        <h2>Brand Music</h2>
+        <audio controls>
+            <source src="audio.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <!-- 🎥 VIDEO SECTION -->
+    <div class="box">
+        <h2>Our Collection Video</h2>
+        <video controls>
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video element.
+        </video>
+    </div>
+
     <div class="box">
         <h2>Contact</h2>
         <p>Email: sthrivasthra@gmail.com</p>
@@ -113,8 +126,12 @@
 </div>
 
 <div class="footer">
-    <p> Sthri Vasthra</p>
+    <p>Sthri Vasthra</p>
 </div>
+
+<footer>
+    <p>©2025 Sthri Vasthra | All rights reserved</p>
+</footer>
 
 </body>
 </html>
