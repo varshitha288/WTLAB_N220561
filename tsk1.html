@@ -1,136 +1,293 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Sthri Vasthra</title>
+<meta charset="UTF-8">
+<title>Sthri Vasthra</title>
 
-    <style>
-        body {
-            font-family: Verdana, sans-serif;
-            margin: 0;
-            background: linear-gradient(to right,rgba(15,23,42,0.9),rgba(15,23,42,0.6)),
-            url("https://tse3.mm.bing.net/th/id/OIP.cWENbj36S5AnO1e_VV46igHaFj?pid=Api&P=0&h=180") center/cover;
-        }
+<style>
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        .header {
-            color: white;
-            text-align: center;
-            padding: 20px;
-            background: linear-gradient(to right,rgba(15,23,42,0.9),rgba(15,23,42,0.6)),
-            url("https://tse3.mm.bing.net/th/id/OIP.cWENbj36S5AnO1e_VV46igHaFj?pid=Api&P=0&h=180") center/cover;
-        }
+html {
+    scroll-behavior: smooth;
+}
 
-        nav {
-            background-color: #f2cdd3;
-            padding: 10px;
-            text-align: center;
-        }
+body {
+    font-family: 'Poppins', Verdana, sans-serif;
+    background-color: #f7f4f5;
+    color: #333;
+}
 
-        nav a {
-            text-decoration: none;
-            margin: 10px;
-            color: #c97575;
-            font-weight: bold;
-        }
+/* ===== HERO ===== */
+.header {
+    height: 70vh;
+    background:
+        linear-gradient(to right, rgba(15,23,42,0.85), rgba(15,23,42,0.6)),
+        url("https://tse3.mm.bing.net/th/id/OIP.cWENbj36S5AnO1e_VV46igHaFj?pid=Api&P=0&h=180")
+        center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
 
-        .content {
-            padding: 20px;
-        }
+.header h1 {
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+}
 
-        .box {
-            background-color: white;
-            border: 1px solid #ccc;
-            padding: 15px;
-            margin-bottom: 15px;
-        }
+.header p {
+    margin-top: 10px;
+    opacity: 0.9;
+}
 
-        .footer {
-            background-color: #a64b5c;
-            color: white;
-            text-align: center;
-            padding: 10px;
-        }
+/* ===== NAVBAR ===== */
+nav {
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
 
-        video, audio {
-            width: 100%;
-            margin-top: 10px;
-        }
-    </style>
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+nav a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: #7a2e3a;
+    font-weight: 600;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #7a2e3a;
+    left: 0;
+    bottom: -6px;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ===== CONTENT ===== */
+.content {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #7a2e3a;
+    margin-bottom: 40px;
+}
+
+.box {
+    background: white;
+    padding: 30px;
+    border-radius: 14px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* ===== COLLECTION LINKS ===== */
+.collection-links {
+    list-style: none;
+}
+
+.collection-links li {
+    margin-bottom: 15px;
+}
+
+.collection-links a {
+    display: block;
+    text-decoration: none;
+    padding: 14px 18px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #7a2e3a;
+    background: #f6e4e7;
+    transition: all 0.3s ease;
+}
+
+.collection-links a:hover {
+    background: #7a2e3a;
+    color: white;
+    transform: translateX(8px);
+}
+
+/* ===== COLLECTION SECTIONS ===== */
+.collection-section {
+    padding-top: 80px;
+}
+
+.collection-section h3 {
+    font-size: 1.6rem;
+    color: #7a2e3a;
+    margin-bottom: 15px;
+}
+
+.collection-section p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* ===== MEDIA ===== */
+audio, video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #2b0f14;
+    color: #ddd;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2.4rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+}
+</style>
 </head>
 
 <body>
 
+<!-- HERO -->
 <div class="header">
-    <h1>Sthri Vasthra</h1>
-    <p>Simple • Elegant • Traditional</p>
+    <div>
+        <h1>Sthri Vasthra</h1>
+        <p>Simple • Elegant • Timeless Tradition</p>
+    </div>
 </div>
 
+<!-- NAV -->
 <nav>
-    <a href="#">Home</a>
-    <a href="#">Collections</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#collections">Collections</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
 </nav>
 
-<div class="content">
+<!-- CONTENT -->
+<div class="content" id="home">
 
+    <h2 class="section-title">Welcome</h2>
     <div class="box">
-        <h2>Welcome</h2>
         <p>
-            Welcome to Sthri Vasthra.  
-            We design clothing that reflects tradition and modern comfort.
+            Sthri Vasthra brings together Indian tradition and modern elegance,
+            creating timeless fashion for every woman.
         </p>
     </div>
 
+    <!-- COLLECTION LINKS -->
+    <h2 class="section-title" id="collections">Our Collections</h2>
     <div class="box">
-        <h2>Our Collections</h2>
-        <ul>
-            <li>Sarees</li>
-            <li>Kurtis</li>
-            <li>Ethnic Sets</li>
-            <li>Festive Wear</li>
+        <ul class="collection-links">
+            <li><a href="#sarees">Sarees</a></li>
+            <li><a href="#kurtis">Kurtis</a></li>
+            <li><a href="#ethnic">Ethnic Sets</a></li>
+            <li><a href="#festive">Festive Wear</a></li>
         </ul>
     </div>
 
-    <div class="box">
-        <h2>About Us</h2>
+    <!-- COLLECTION DETAILS -->
+    <div class="box collection-section" id="sarees">
+        <h3>Sarees</h3>
         <p>
-            Sthri Vasthra is a women’s clothing brand inspired by Indian culture.
-            Our aim is to make every woman feel confident and comfortable.
+            Graceful sarees crafted with rich fabrics, perfect for everyday elegance
+            and special occasions.
         </p>
     </div>
 
+    <div class="box collection-section" id="kurtis">
+        <h3>Kurtis</h3>
+        <p>
+            Comfortable yet stylish kurtis designed for modern lifestyles.
+        </p>
+    </div>
 
+    <div class="box collection-section" id="ethnic">
+        <h3>Ethnic Sets</h3>
+        <p>
+            Beautifully coordinated ethnic sets that combine comfort and tradition.
+        </p>
+    </div>
+
+    <div class="box collection-section" id="festive">
+        <h3>Festive Wear</h3>
+        <p>
+            Luxurious festive outfits designed to make celebrations unforgettable.
+        </p>
+    </div>
+
+    <!-- ABOUT -->
+    <h2 class="section-title" id="about">About Us</h2>
     <div class="box">
-        <h2>Brand Music</h2>
+        <p>
+            Inspired by Indian craftsmanship, Sthri Vasthra focuses on premium quality,
+            elegant design, and timeless appeal.
+        </p>
+    </div>
+
+    <!-- MEDIA -->
+    <h2 class="section-title">Brand Music</h2>
+    <div class="box">
         <audio controls>
             <source src="audio.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
         </audio>
     </div>
 
-    
+    <h2 class="section-title">Collection Video</h2>
     <div class="box">
-        <h2>Our Collection Video</h2>
         <video controls>
             <source src="video.mp4" type="video/mp4">
-            Your browser does not support the video element.
         </video>
     </div>
 
+    <!-- CONTACT -->
+    <h2 class="section-title" id="contact">Contact</h2>
     <div class="box">
-        <h2>Contact</h2>
         <p>Email: sthrivasthra@gmail.com</p>
-        <p>Instagram | WhatsApp</p>
+        <p>Instagram • WhatsApp</p>
     </div>
 
 </div>
 
-<div class="footer">
-    <p>Sthri Vasthra</p>
-</div>
-
 <footer>
-    <p>©2025 Sthri Vasthra | All rights reserved</p>
+    <p>© 2025 Sthri Vasthra | Crafted with Elegance</p>
 </footer>
 
 </body>
