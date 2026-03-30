@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sthri Vasthra</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* ===== VARIABLES ===== */
+        :root {
+            --primary: #7a2e3a;
+            --secondary: #f6e4e7;
+            --dark: #2b0f14;
+            --light: #f7f4f5;
+        }
+
+        /* ===== RESET ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--light);
+            color: #333;
+        }
+
+        /* ===== HERO ===== */
+        .header {
+            height: 75vh;
+            background:
+                linear-gradient(to right, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.6)),
+                url("https://images.unsplash.com/photo-1610030469983-98e550d6193c") center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 3.5rem;
+        }
+
+        .header p {
+            margin-top: 10px;
+        }
+
+        /* ===== NAV ===== */
+        nav {
+            background: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+            list-style: none;
+        }
+
+        nav a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 600;
+            position: relative;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            left: 0;
+            bottom: -5px;
+            transition: 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* ===== CONTENT ===== */
+        .content {
+            max-width: 1100px;
+            margin: auto;
+            padding: 50px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--primary);
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+
+        /* ===== CARDS ===== */
+        .collection-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transition: 0.4s;
+        }
+
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            text-align: center;
+            margin: 15px 0 5px;
+            color: var(--primary);
+        }
+
+        .card p {
+            text-align: center;
+            padding: 0 15px 20px;
+            font-size: 0.9rem;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        /* ===== BOX ===== */
+        .box {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media(max-width:768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HERO -->
+    <div class="header">
+        <div>
+            <h1>Sthri Vasthra</h1>
+            <p>Simple • Elegant • Timeless Tradition</p>
+        </div>
+    </div>
+
+    <!-- NAV -->
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#collections">Collections</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- CONTENT -->
+    <div class="content">
+
+        <h2 class="section-title">Welcome</h2>
+        <div class="box">
+            <p>Sthri Vasthra brings together Indian tradition and modern elegance for every woman.</p>
+        </div>
+
+        <!-- COLLECTIONS -->
+        <h2 class="section-title" id="collections">Our Collections</h2>
+
+        <div class="collection-grid">
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990">
+                <h3>Sarees</h3>
+                <p>Elegant traditional wear for every occasion.</p>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1593032465171-8b6c1f8f3e1a">
+                <h3>Kurtis</h3>
+                <p>Comfort meets modern fashion.</p>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf">
+                <h3>Ethnic Sets</h3>
+                <p>Perfectly styled coordinated outfits.</p>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1622445275463-afa2ab738c34">
+                <h3>Festive Wear</h3>
+                <p>Celebrate with luxury and elegance.</p>
+            </div>
+
+        </div>
+
+        <!-- ABOUT -->
+        <h2 class="section-title" id="about">About Us</h2>
+        <div class="box">
+            <p>Inspired by Indian craftsmanship, Sthri Vasthra focuses on elegance and quality.</p>
+        </div>
+
+        <!-- MEDIA -->
+        <h2 class="section-title">Brand Music</h2>
+        <div class="box">
+            <audio controls>
+                <source src="audio.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
+        <h2 class="section-title">Collection Video</h2>
+        <div class="box">
+            <video controls>
+                <source src="video.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <!-- CONTACT -->
+        <h2 class="section-title" id="contact">Contact</h2>
+        <div class="box">
+            <p>Email: sthrivasthra@gmail.com</p>
+            <p>Instagram • WhatsApp</p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2025 Sthri Vasthra | Crafted with Elegance</p>
+    </footer>
+
+</body>
+
+</html>
